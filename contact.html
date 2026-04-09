@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Fay Consult Group — book a free AI discovery call or send a message. We serve manufacturing, logistics, and supply chain companies across PA, NJ, MD, and DE." />
+  <title>Contact — Fay Consult Group</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNHFNSK25P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CNHFNSK25P');
+  </script>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Fay Consult Group Home">
+        <span class="logo-mark">FCG</span>
+        <span class="logo-text">Fay Consult Group</span>
+      </a>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="about.html"    class="nav__link">About</a></li>
+        <li><a href="contact.html"  class="nav__link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary nav__cta">Book a Call</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__content fade-up">
+          <span class="section-label">Get In Touch</span>
+          <h1>Start the Conversation.<br><span class="text-accent">The First Call Is Free.</span></h1>
+          <p>No pitch, no pressure. Tell us about your operation and we'll tell you honestly where AI can help — and where it can't.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT SECTION ===================== -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="grid-2">
+
+          <!-- Left Column -->
+          <div class="contact-left fade-up">
+            <h2>Let's Talk About<br>Your Operation.</h2>
+            <p>
+              The best way to figure out whether we're a fit is a 30-minute discovery call. We'll ask about your current workflows, where your team is losing time, and what your data situation looks like. From there, we can give you an honest read on what AI can realistically do for your operation — and what it would take to get there.
+            </p>
+
+            <!-- Book a Call button -->
+            <!-- Replace with your Google Calendar appointment scheduling link -->
+            <div class="contact-cal-btn">
+              <a
+                href="https://calendar.google.com/calendar/appointments/YOUR_LINK"
+                class="btn btn--primary btn--lg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📅 &nbsp;Book a Free Discovery Call
+              </a>
+              <!-- Replace with your Google Calendar appointment scheduling link -->
+            </div>
+
+            <div class="contact-divider">or reach out directly</div>
+
+            <div class="contact-email-row">
+              <span class="email-icon">✉️</span>
+              <a href="mailto:evan@fayconsultgroup.com">evan@fayconsultgroup.com</a>
+            </div>
+
+            <!-- Trust signals -->
+            <div style="margin-top: 48px; display: flex; flex-direction: column; gap: 16px;">
+              <div style="display: flex; align-items: flex-start; gap: 14px;">
+                <span style="font-size: 1.2rem; flex-shrink: 0; margin-top: 2px;">✅</span>
+                <div>
+                  <strong style="font-family: var(--font-heading); font-size: 0.92rem; color: var(--text-heading); display: block; margin-bottom: 2px;">Free 30-Minute Discovery Call</strong>
+                  <span style="font-size: 0.88rem; color: var(--text-muted);">No commitment, no sales script — just an honest conversation.</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 14px;">
+                <span style="font-size: 1.2rem; flex-shrink: 0; margin-top: 2px;">✅</span>
+                <div>
+                  <strong style="font-family: var(--font-heading); font-size: 0.92rem; color: var(--text-heading); display: block; margin-bottom: 2px;">You'll Talk Directly to Evan</strong>
+                  <span style="font-size: 0.88rem; color: var(--text-muted);">No account managers or junior staff — ever.</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 14px;">
+                <span style="font-size: 1.2rem; flex-shrink: 0; margin-top: 2px;">✅</span>
+                <div>
+                  <strong style="font-family: var(--font-heading); font-size: 0.92rem; color: var(--text-heading); display: block; margin-bottom: 2px;">Serving PA · NJ · MD · DE</strong>
+                  <span style="font-size: 0.88rem; color: var(--text-muted);">Local to your market, on-site when it matters.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column — Contact Form -->
+          <div class="contact-form-card fade-up delay-2">
+            <h3>Send Us a Message</h3>
+
+            <!--
+              Formspree form — replace YOUR_FORM_ID with your endpoint after
+              signing up at formspree.io
+            -->
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+            >
+              <!-- Replace YOUR_FORM_ID with your Formspree endpoint after signing up at formspree.io -->
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name <span style="color:var(--accent-1);">*</span></label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Jane Smith"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="company">Company Name <span style="color:var(--accent-1);">*</span></label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Acme Manufacturing"
+                    required
+                    autocomplete="organization"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address <span style="color:var(--accent-1);">*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="jane@acme.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone <span style="color:var(--text-muted); font-weight:400;">(optional)</span></label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="(215) 555-0100"
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="interest">What Are You Interested In? <span style="color:var(--accent-1);">*</span></label>
+                <select id="interest" name="interest" required>
+                  <option value="" disabled selected>Select a service…</option>
+                  <option value="AI Operations Audit">AI Operations Audit</option>
+                  <option value="Process Automation">Process Automation &amp; Workflow Optimization</option>
+                  <option value="Custom AI Tool Build">Custom AI Tool Build</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Tell Us About Your Operation <span style="color:var(--accent-1);">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="What does your operation look like? Where are you losing the most time or visibility right now? Any context helps."
+                  required
+                  rows="5"
+                ></textarea>
+              </div>
+
+              <!-- Honeypot field to reduce spam -->
+              <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off" />
+
+              <button type="submit" class="btn btn--primary form-submit">
+                Send Message →
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" aria-label="Fay Consult Group Home">
+          <span class="logo-mark">FCG</span>
+          <span class="logo-text">Fay Consult Group</span>
+        </a>
+        <p class="footer__tagline">AI consulting for operations-driven companies.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Pages</h4>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contact</h4>
+        <p><a href="mailto:evan@fayconsultgroup.com">evan@fayconsultgroup.com</a></p>
+        <p>Serving PA &middot; NJ &middot; MD &middot; DE</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2025 Fay Consult Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
