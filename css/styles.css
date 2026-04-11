@@ -456,9 +456,9 @@ p  { font-size: 1rem; color: var(--text-body); line-height: 1.7; }
 .hero-accent {
   position: relative;
   display: inline;
-  background: none;
-  -webkit-text-fill-color: var(--accent-1);
   color: var(--accent-1);
+  background: none;
+  -webkit-text-fill-color: unset;
 }
 
 .hero-accent::after {
