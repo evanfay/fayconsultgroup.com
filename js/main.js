@@ -163,10 +163,10 @@
         statsObserver.disconnect();
 
         var stats = [
-          { el: document.getElementById('stat1'), target: 50,  suffix: '+',   duration: 1400 },
-          { el: document.getElementById('stat2'), target: 12,  suffix: ' hrs', duration: 1200 },
-          { el: document.getElementById('stat3'), target: 20,  suffix: '+',   duration: 1000 },
-          { el: document.getElementById('stat4'), target: 100, suffix: '%',   duration: 1600 },
+          { el: document.getElementById('stat1'), target: 10,  suffix: '+',    duration: 1000 },
+          { el: document.getElementById('stat2'), target: 5,   suffix: '+ hrs', duration: 900 },
+          { el: document.getElementById('stat3'), target: 3,   suffix: '',     duration: 700 },
+          { el: document.getElementById('stat4'), target: 100, suffix: '%',    duration: 1400 },
         ];
 
         stats.forEach(function (s) {
