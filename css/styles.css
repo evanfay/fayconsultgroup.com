@@ -216,7 +216,7 @@ p  { font-size: 1rem; color: var(--text-body); line-height: 1.7; }
 }
 
 .nav__logo:has(.nav__logo-img) {
-  gap: 0;
+  gap: 10px;
 }
 
 .nav__links {
