@@ -268,13 +268,25 @@
     e.preventDefault();
     var nameEl  = document.getElementById('modalName');
     var emailEl = document.getElementById('modalEmail');
+    var phoneEl = document.getElementById('modalPhone');
     if (!emailEl || !emailEl.value) return;
 
-    // In production this would POST to a server or Formspree
+    var formData = Object.assign({}, modalAnswers, {
+      name:  nameEl  ? nameEl.value  : '',
+      email: emailEl.value,
+      phone: phoneEl ? phoneEl.value : ''
+    });
+
+    fetch('https://formspree.io/f/mojpgpyo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
     if (modalThanks) {
       modalSteps.forEach(function (s) { s.classList.remove('active'); });
-      var formEl = modalOverlay.querySelector('.modal-progress-wrap');
-      if (formEl) formEl.style.display = 'none';
+      var progressWrap = modalOverlay.querySelector('.modal-progress-wrap');
+      if (progressWrap) progressWrap.style.display = 'none';
       modalThanks.classList.add('active');
     }
   }
@@ -417,8 +429,22 @@
         e.preventDefault();
         var emailInput = quizGateForm.querySelector('input[type="email"]');
         if (!emailInput || !emailInput.value) return;
-        var btn = quizGateForm.querySelector('button');
-        if (btn) btn.textContent = 'Sent!';
+
+        var scoreEl  = quizCard.querySelector('.quiz-result__score');
+        var labelEl  = quizCard.querySelector('.quiz-result__label');
+        var descEl   = quizCard.querySelector('.quiz-result__desc');
+
+        fetch('https://formspree.io/f/xvzvevlg', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            email:  emailInput.value,
+            score:  scoreEl ? scoreEl.textContent  : '',
+            result: labelEl ? labelEl.textContent  : '',
+            detail: descEl  ? descEl.textContent   : ''
+          })
+        });
+
         var gate = quizGateForm.closest('.email-gate');
         if (gate) {
           gate.innerHTML = '<p style="color:var(--accent-1);font-weight:600;text-align:center;padding:10px 0">✅ Check your inbox! Your personalized results are on the way.</p>';
@@ -483,8 +509,20 @@
         e.preventDefault();
         var emailInput = roiGateForm.querySelector('input[type="email"]');
         if (!emailInput || !emailInput.value) return;
-        var btn = roiGateForm.querySelector('button');
-        if (btn) btn.textContent = 'Sent!';
+
+        fetch('https://formspree.io/f/xwvwgwyv', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            email:             emailInput.value,
+            annual_cost:       document.getElementById('roiAnnualCost')    ? document.getElementById('roiAnnualCost').textContent    : '',
+            potential_savings: document.getElementById('roiPotentialSave') ? document.getElementById('roiPotentialSave').textContent : '',
+            employees:         document.getElementById('roiEmployees')     ? document.getElementById('roiEmployees').value + ' people'   : '',
+            hours_per_week:    document.getElementById('roiHours')         ? document.getElementById('roiHours').value + ' hrs/week'      : '',
+            hourly_rate:       document.getElementById('roiRate')          ? '$' + document.getElementById('roiRate').value + '/hr'        : ''
+          })
+        });
+
         var gate = roiGateForm.closest('.email-gate');
         if (gate) {
           gate.innerHTML = '<p style="color:var(--accent-1);font-weight:600;text-align:center;padding:10px 0">✅ Your full breakdown is on the way. Check your inbox!</p>';
