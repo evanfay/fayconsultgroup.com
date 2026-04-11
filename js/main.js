@@ -551,15 +551,41 @@
   /* ----------------------------------------
      12. Contact form UX
   ---------------------------------------- */
-  var contactForm = document.getElementById('contactForm');
+  var contactForm    = document.getElementById('contactForm');
+  var contactSuccess = document.getElementById('contactSuccess');
+
   if (contactForm) {
-    contactForm.addEventListener('submit', function () {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
       var submitBtn = contactForm.querySelector('[type="submit"]');
       if (submitBtn) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled    = true;
         submitBtn.style.opacity = '0.75';
       }
+
+      var data = {};
+      new FormData(contactForm).forEach(function (val, key) { data[key] = val; });
+
+      fetch('https://formspree.io/f/mnjoeolv', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body:    JSON.stringify(data)
+      })
+      .then(function (res) { return res.json(); })
+      .then(function () {
+        contactForm.style.display = 'none';
+        if (contactSuccess) contactSuccess.style.display = 'block';
+      })
+      .catch(function () {
+        if (submitBtn) {
+          submitBtn.textContent = 'Send Message →';
+          submitBtn.disabled    = false;
+          submitBtn.style.opacity = '1';
+        }
+        alert('Something went wrong. Please email evan@fayconsultgroup.com directly.');
+      });
     });
   }
 
