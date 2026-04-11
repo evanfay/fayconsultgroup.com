@@ -3,42 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About Fay Consult Group — AI consulting rooted in real operations experience. Meet founder Evan Fay and learn about our approach to mid-market AI implementation." />
+  <meta name="description" content="About Fay Consult Group. AI consulting built on real operations experience. Meet founder Evan Fay and learn about our approach to small and mid-size business AI." />
   <title>About — Fay Consult Group</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
-    /* About-specific overrides */
-    .mission-section {
-      padding: 96px 0;
-    }
-
+    .mission-section { padding: 96px 0; }
     .mission-section__inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
     }
-
-    .mission-section h2 {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      margin-bottom: 24px;
-    }
-
-    .mission-section p {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.78;
-      margin-bottom: 16px;
-    }
-
+    .mission-section h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 24px; }
+    .mission-section p  { font-size: 1.05rem; color: var(--text-muted); line-height: 1.78; margin-bottom: 16px; }
     .mission-visual {
       background: var(--card-bg);
       backdrop-filter: blur(12px);
@@ -50,17 +35,12 @@
       flex-direction: column;
       gap: 28px;
     }
-
-    .mission-stat {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
+    .mission-stat { display: flex; align-items: center; gap: 20px; }
     .mission-stat__num {
       font-family: var(--font-heading);
-      font-size: 2.4rem;
+      font-size: 2rem;
       font-weight: 700;
+      font-style: italic;
       background: var(--accent-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -69,25 +49,19 @@
       flex-shrink: 0;
       min-width: 80px;
     }
-
     .mission-stat__label {
-      font-family: var(--font-heading);
+      font-family: var(--font-body);
       font-size: 0.92rem;
       font-weight: 500;
       color: var(--text-body);
-      line-height: 1.4;
+      line-height: 1.45;
     }
-
     .mission-stat + .mission-stat {
       border-top: 1px solid rgba(0,0,0,0.07);
       padding-top: 28px;
     }
-
     @media (max-width: 768px) {
-      .mission-section__inner {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
+      .mission-section__inner { grid-template-columns: 1fr; gap: 48px; }
     }
   </style>
 
@@ -101,6 +75,9 @@
   </script>
 </head>
 <body>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition-overlay" id="pageTransition"></div>
 
   <!-- ===================== NAV ===================== -->
   <nav class="nav" id="nav">
@@ -129,8 +106,8 @@
       <div class="container">
         <div class="page-hero__content fade-up">
           <span class="section-label">About Us</span>
-          <h1>We've Worked the Floor.<br><span class="text-accent">Now We Automate It.</span></h1>
-          <p>Fay Consult Group exists because mid-market operations companies deserve AI consulting that starts from the floor up — not from a PowerPoint down.</p>
+          <h1>We Have Worked the Floor. Now We Automate It.</h1>
+          <p>Fay Consult Group exists because small and mid-size operations companies deserve AI consulting that starts from the floor up, not from a PowerPoint down.</p>
         </div>
       </div>
     </section>
@@ -143,28 +120,28 @@
             <span class="section-label">Our Mission</span>
             <h2>Practical AI for Companies That Build, Ship, and Move Things</h2>
             <p>
-              Too many AI consultants sell transformation. We sell results. Fay Consult Group was built specifically for manufacturing, logistics, and supply chain companies in the 20–200 employee range — the companies that run the real economy but rarely get the same technology access as the enterprise players.
+              Too many AI consultants sell transformation. We sell results. Fay Consult Group was built specifically for small and mid-size manufacturing, logistics, and supply chain companies. The companies that run the real economy but rarely get the same technology access as the enterprise players.
             </p>
             <p>
-              We don't parachute in with a framework and leave. We sit down with your ops director, walk your floor, understand your data, and build systems that your team actually uses. That's it. That's the whole model.
+              We do not parachute in with a framework and leave. We sit down with your team, walk your floor, understand your data, and build systems that your people actually use. That is the whole model.
             </p>
             <p>
-              Our focus is the PA/NJ/MD/DE corridor — local enough to be on-site when it matters, experienced enough to serve any operation in the region.
+              Our focus is the PA, NJ, MD, and DE corridor. Local enough to be on-site when it matters, experienced enough to serve any operation in the region.
             </p>
           </div>
 
           <div class="mission-visual fade-up delay-2">
             <div class="mission-stat">
-              <div class="mission-stat__num">Mid-<br>Market</div>
-              <div class="mission-stat__label">Focused exclusively on 20–200 person operations — not enterprise, not startups</div>
+              <div class="mission-stat__num">Small and Mid</div>
+              <div class="mission-stat__label">Focused on 5 to 200 person operations. Not enterprise, not startups.</div>
             </div>
             <div class="mission-stat">
               <div class="mission-stat__num">4</div>
-              <div class="mission-stat__label">States served — PA, NJ, MD, and DE, with on-site availability throughout the corridor</div>
+              <div class="mission-stat__label">States served. PA, NJ, MD, and DE with on-site availability throughout the corridor.</div>
             </div>
             <div class="mission-stat">
-              <div class="mission-stat__num">ROI<br>First</div>
-              <div class="mission-stat__label">Every engagement is scoped around measurable outcomes — not billable hours</div>
+              <div class="mission-stat__num">ROI First</div>
+              <div class="mission-stat__label">Every engagement is scoped around measurable outcomes, not billable hours.</div>
             </div>
           </div>
         </div>
@@ -180,7 +157,7 @@
         </div>
 
         <div class="founder__inner fade-up">
-          <!-- Replace this placeholder block with an <img> tag when your photo is ready -->
+          <!-- Replace this placeholder block with an <img> tag once your photo is ready -->
           <div class="founder__photo">
             <span class="photo-icon">👤</span>
             <span>Photo Coming Soon</span>
@@ -188,19 +165,20 @@
 
           <div class="founder__bio-content">
             <h3 class="founder__name">Evan Fay</h3>
-            <p class="founder__title">Founder &amp; Principal Consultant</p>
+            <p class="founder__title">Founder and Principal Consultant</p>
             <p class="founder__bio">
-              Evan spent years working in lean manufacturing and operations analysis before making the transition into AI consulting — which means he's been in the production meetings, built the tracking spreadsheets, and felt the frustration of a report that takes four hours to pull together every Monday morning. That background isn't incidental. It's the foundation of how Fay Consult Group approaches every engagement.
+              Evan spent years working in lean manufacturing and operations analysis before transitioning into AI consulting. That means he has been in the production meetings, built the tracking spreadsheets, and felt the frustration of a report that takes four hours to pull together every Monday morning. That background is not incidental. It is the foundation of how Fay Consult Group approaches every engagement.
             </p>
             <p class="founder__bio" style="margin-top: 16px;">
-              When he started working with AI tools seriously, the immediate observation was clear: the technology was powerful, but most of the consulting around it was built for people with data science teams and seven-figure technology budgets. The mid-market operations world — the manufacturers, the 3PLs, the distributors — was being largely ignored. Fay Consult Group is the answer to that gap.
+              When he started working seriously with AI tools, the same observation kept coming up. The technology was powerful, but most of the consulting around it was built for companies with data science teams and large technology budgets. The small and mid-size operations world, the manufacturers, the 3PLs, the distributors, was being largely ignored. Fay Consult Group is the answer to that gap.
             </p>
             <p class="founder__bio" style="margin-top: 16px;">
-              Evan works directly with clients on every engagement. No account managers, no junior consultants handed the keys after the kickoff call.
+              Evan works directly with every client on every engagement. No account managers. No junior consultants handed the keys after the kickoff call.
             </p>
 
-            <div style="margin-top: 28px;">
+            <div style="margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap;">
               <a href="contact.html" class="btn btn--primary">Work With Evan →</a>
+              <button class="btn btn--secondary" data-open-modal="discovery">Take the Free Assessment</button>
             </div>
           </div>
         </div>
@@ -212,25 +190,25 @@
       <div class="container">
         <div class="section__header fade-up">
           <span class="section-label">Our Approach</span>
-          <h2>Three Principles Behind<br>Everything We Build</h2>
-          <p>These aren't marketing words. They're the filters we run every engagement decision through.</p>
+          <h2>Three Principles Behind Everything We Build</h2>
+          <p>These are not marketing words. They are the filters we run every engagement decision through.</p>
         </div>
 
         <div class="values-grid">
           <div class="value-card fade-up delay-1">
             <div class="value-card__num">01</div>
             <h3>Practical Over Theoretical</h3>
-            <p>We don't sell you a vision of AI. We build something that runs in your environment, works with your data, and solves a specific problem your team has today. If it can't be deployed and adopted in weeks — not quarters — we rethink the approach.</p>
+            <p>We do not sell you a vision of AI. We build something that runs in your environment, works with your data, and solves a specific problem your team has today. If it cannot be deployed and adopted in weeks, we rethink the approach.</p>
           </div>
           <div class="value-card fade-up delay-2">
             <div class="value-card__num">02</div>
-            <h3>ROI-First</h3>
-            <p>Before we write a single line of code or build a single workflow, we've identified what success looks like in dollars and hours. Every recommendation is tied to a measurable outcome — because that's what you're paying us for, not innovation theater.</p>
+            <h3>ROI First</h3>
+            <p>Before we write a single line of code or build a single workflow, we have identified what success looks like in dollars and hours. Every recommendation is tied to a measurable outcome. That is what you are paying us for, not innovation theater.</p>
           </div>
           <div class="value-card fade-up delay-3">
             <div class="value-card__num">03</div>
-            <h3>Built for Mid-Market Operations</h3>
-            <p>We're not a generalist AI shop that dabbles in manufacturing. This is all we do. That means we understand your ERP constraints, your shift-based data patterns, your workforce dynamics, and the difference between what works in a warehouse and what works in a slide deck.</p>
+            <h3>Built for Small and Mid-Size Operations</h3>
+            <p>We are not a generalist AI shop that dabbles in manufacturing. This is all we do. That means we understand your ERP constraints, your shift-based data patterns, and the difference between what works on a warehouse floor and what works in a slide deck.</p>
           </div>
         </div>
       </div>
@@ -241,8 +219,11 @@
       <div class="container">
         <div class="cta-banner__content fade-up">
           <h2>Ready to Work With Someone Who Understands Your Operation?</h2>
-          <p>Book a free call with Evan. No pitch, no pressure — just an honest conversation about where AI can help you most.</p>
-          <a href="contact.html" class="btn btn--white btn--lg">Book a Free Discovery Call</a>
+          <p>Book a free call with Evan. No pitch, no pressure. Just an honest conversation about where AI can help you most.</p>
+          <div class="cta-banner__actions">
+            <a href="contact.html" class="btn btn--white btn--lg">Book a Free Discovery Call</a>
+            <button class="btn btn--outline-white btn--lg" data-open-modal="discovery">Take the Free Assessment</button>
+          </div>
         </div>
       </div>
     </section>
@@ -257,7 +238,7 @@
           <span class="logo-mark">FCG</span>
           <span class="logo-text">Fay Consult Group</span>
         </a>
-        <p class="footer__tagline">AI consulting for operations-driven companies.</p>
+        <p class="footer__tagline">AI consulting for operations driven companies.</p>
       </div>
       <div class="footer__links">
         <h4>Pages</h4>
@@ -280,6 +261,35 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===================== DISCOVERY MODAL ===================== -->
+  <div class="modal-overlay" id="discoveryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close assessment">&times;</button>
+      <div class="modal__header">
+        <span class="section-label">Free Assessment</span>
+        <h3 id="modalTitle">Tell Us About Your Operation</h3>
+        <p>10 quick questions. Takes about 3 minutes. We will follow up with a personalized overview.</p>
+      </div>
+      <div class="modal-progress-wrap">
+        <div class="modal-progress-track"><div class="modal-progress-fill" style="width:0%;"></div></div>
+        <div class="modal-progress-text"><span>Question <span id="modalStepNum">1 of 10</span></span></div>
+      </div>
+      <form id="modalForm">
+        <div class="modal-step active"><div class="modal-step__question">What type of business do you run?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Manufacturing">🏭 &nbsp;Manufacturing</button><button type="button" class="modal-option" data-value="Logistics">🚚 &nbsp;Logistics and Distribution</button><button type="button" class="modal-option" data-value="Supply Chain">🔗 &nbsp;Supply Chain</button><button type="button" class="modal-option" data-value="Other">💼 &nbsp;Other small or mid-size business</button></div><div class="modal-nav"><button type="button" class="modal-back" id="modalBack" disabled>← Back</button><button type="button" class="btn btn--primary modal-next" id="modalNext">Next →</button></div></div>
+        <div class="modal-step"><div class="modal-step__question">How many people work at your company?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Under 10">Under 10</button><button type="button" class="modal-option" data-value="10 to 50">10 to 50</button><button type="button" class="modal-option" data-value="51 to 100">51 to 100</button><button type="button" class="modal-option" data-value="101+">101 to 200 or more</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
+        <div class="modal-step"><div class="modal-step__question">How does your team handle weekly reporting?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Manual">Manual spreadsheets and back and forth</button><button type="button" class="modal-option" data-value="Mix">A mix of tools with lots of manual work</button><button type="button" class="modal-option" data-value="Mostly auto">Mostly automated but gaps remain</button><button type="button" class="modal-option" data-value="Good">We have solid systems already</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
+        <div class="modal-step"><div class="modal-step__question">How would you describe your current data situation?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Scattered">Scattered and hard to pull together</button><button type="button" class="modal-option" data-value="Messy">In one place but messy</button><button type="button" class="modal-option" data-value="Organized">Organized but underused</button><button type="button" class="modal-option" data-value="Unsure">Not sure</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
+        <div class="modal-step"><div class="modal-step__question">Where is your team losing the most time?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Reporting">Building reports and pulling data</button><button type="button" class="modal-option" data-value="Chasing">Chasing updates and status checks</button><button type="button" class="modal-option" data-value="Admin">Repetitive data entry and admin</button><button type="button" class="modal-option" data-value="Fires">Putting out fires instead of planning</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
+        <div class="modal-step"><div class="modal-step__question">Have you explored AI tools for your business?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Not yet">Not yet, but I know I should</button><button type="button" class="modal-option" data-value="Overwhelmed">Looked into it and got overwhelmed</button><button type="button" class="modal-option" data-value="Tried">Tried a few things, nothing stuck</button><button type="button" class="modal-option" data-value="Using">Using some tools and want to do more</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
+        <div class="modal-step"><div class="modal-step__question">How many hours per week on tasks that could be automated?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Under 5">Less than 5 hours</button><button type="button" class="modal-option" data-value="5 to 15">5 to 15 hours</button><button type="button" class="modal-option" data-value="15 to 30">15 to 30 hours</button><button type="button" class="modal-option" data-value="30+">More than 30 hours</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
+        <div class="modal-step"><div class="modal-step__question">Who makes the call on new technology investments?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Owner">Me. I am the owner or founder</button><button type="button" class="modal-option" data-value="Ops">Operations director or plant manager</button><button type="button" class="modal-option" data-value="Leadership">A leadership team decision</button><button type="button" class="modal-option" data-value="TBD">Still figuring that out</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
+        <div class="modal-step"><div class="modal-step__question">What is your timeline for making a change?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Now">We need help now</button><button type="button" class="modal-option" data-value="3mo">In the next three months</button><button type="button" class="modal-option" data-value="6to12">Six to twelve months</button><button type="button" class="modal-option" data-value="Exploring">Just exploring for now</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
+        <div class="modal-step"><div class="modal-step__question">Last step. Who should we send your personalized assessment to?</div><div class="modal-final-fields"><div class="form-group" style="margin-bottom:0;"><label for="modalName">Your Name</label><input type="text" id="modalName" name="name" placeholder="Jane Smith" autocomplete="name" /></div><div class="form-group" style="margin-bottom:0;"><label for="modalEmail">Email Address <span style="color:var(--accent-1);">*</span></label><input type="email" id="modalEmail" name="email" placeholder="jane@company.com" autocomplete="email" required /></div><div class="form-group" style="margin-bottom:0;"><label for="modalPhone">Phone <span style="font-weight:400;color:var(--text-muted);">(optional)</span></label><input type="tel" id="modalPhone" name="phone" placeholder="(215) 555-0100" autocomplete="tel" /></div></div><div class="modal-nav" style="margin-top:20px;"><button type="button" class="modal-back">← Back</button><button type="submit" class="btn btn--primary">Send My Assessment →</button></div></div>
+      </form>
+      <div class="modal-thanks"><div class="modal-thanks__icon">🎉</div><h3>You are all set!</h3><p>We will review your responses and send you a personalized assessment within one business day.</p><a href="contact.html" class="btn btn--primary btn--lg">Book a Discovery Call Now</a></div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

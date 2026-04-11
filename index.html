@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fay Consult Group helps manufacturing, logistics, and supply chain companies in the PA/NJ/MD/DE corridor identify and implement AI solutions that save time and money — hands-on, not slide decks." />
-  <title>Fay Consult Group — AI Consulting for Operations-Driven Companies</title>
+  <meta name="description" content="Fay Consult Group helps small and mid-size manufacturing, logistics, and supply chain companies cut through the AI noise and implement the right tools for their operation." />
+  <title>Fay Consult Group — AI Consulting for Small and Mid-Size Operations</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -24,6 +24,9 @@
   </script>
 </head>
 <body>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition-overlay" id="pageTransition"></div>
 
   <!-- ===================== NAV ===================== -->
   <nav class="nav" id="nav">
@@ -49,16 +52,29 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero">
+      <!-- Ambient orbs -->
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+
       <div class="container">
         <div class="hero__content">
-          <div class="hero__eyebrow">AI Consulting for Mid-Market Operations</div>
-          <h1>Your Operation Is Smarter<br>Than Your Systems.<br><span class="text-accent">Let's Fix That.</span></h1>
+          <div class="hero__eyebrow">AI Consulting for Operations Teams</div>
+
+          <h1>
+            You know AI can help your business.<br>
+            <span class="text-accent">
+              <span class="typed-wrapper" id="typedText">We make sure it actually does.</span><span class="typing-cursor"></span>
+            </span>
+          </h1>
+
           <p class="hero__sub">
-            Fay Consult Group helps manufacturing, logistics, and supply chain companies replace manual processes, spreadsheets, and tribal knowledge with AI that actually works on the floor.
+            AI tools are multiplying faster than anyone can keep up with. You know your operation should be using them. The hard part is knowing where to start and what actually works on your floor. We bring order to the noise and build the right solutions alongside your team.
           </p>
+
           <div class="hero__actions">
             <a href="contact.html" class="btn btn--primary btn--lg">Book a Free Discovery Call</a>
-            <a href="services.html" class="btn btn--secondary btn--lg">See Our Services</a>
+            <button class="btn btn--secondary btn--lg" data-open-modal="discovery">Take the Free Assessment</button>
           </div>
         </div>
       </div>
@@ -84,25 +100,25 @@
       <div class="container">
         <div class="section__header fade-up">
           <span class="section-label">Why Fay Consult Group</span>
-          <h2>We've Been on the Floor.<br>We Know What Actually Works.</h2>
-          <p>Most AI consultants hand you a strategy deck and disappear. We stay until the problem is solved — because we've worked in operations ourselves.</p>
+          <h2>We Cut Through the Noise So You Don't Have To</h2>
+          <p>Most small and mid-size operations teams don't have time to evaluate dozens of AI tools while running a business. We do that work for you and only bring what actually fits.</p>
         </div>
 
         <div class="grid-3">
           <div class="card fade-up delay-1">
             <div class="card__icon">🏗️</div>
-            <h3>Operators First,<br>Tech Second</h3>
-            <p>Our team has real ops backgrounds — lean manufacturing, production scheduling, fulfillment. We know how your floor runs before we touch a single line of code.</p>
+            <h3>Operators First, Tech Second</h3>
+            <p>We come from operations backgrounds, not software sales. We know how your floor runs before we suggest changing anything about it.</p>
           </div>
           <div class="card fade-up delay-2">
             <div class="card__icon">⚡</div>
             <h3>Fast Time to Value</h3>
-            <p>No 6-month discovery phases. No retainers for vague deliverables. We move fast, focus on the highest-impact bottlenecks first, and get wins on the board quickly.</p>
+            <p>No six month discovery phases. No retainers for vague deliverables. We focus on the highest impact bottlenecks first and get wins on the board quickly.</p>
           </div>
           <div class="card fade-up delay-3">
             <div class="card__icon">🔧</div>
             <h3>We Build It With You</h3>
-            <p>Implementation is where most consultants disappear. We stay through deployment, training, and iteration — until your team owns it and it's running smoothly.</p>
+            <p>Implementation is where most consultants disappear. We stay through deployment, training, and iteration until your team owns it and it runs without us.</p>
           </div>
         </div>
       </div>
@@ -113,30 +129,198 @@
       <div class="container">
         <div class="section__header fade-up">
           <span class="section-label">Services</span>
-          <h2>Three Ways We Help<br>Operations Like Yours</h2>
-          <p>From diagnosis to deployment — we cover the full stack of operational AI, tailored to companies with 20–200 employees.</p>
+          <h2>Three Ways We Help Operations Like Yours</h2>
+          <p>From diagnosis to deployment, we cover the full picture of operational AI for small and mid-size companies that build, ship, and move things.</p>
         </div>
 
         <div class="grid-3">
           <div class="card fade-up delay-1">
             <div class="card__icon">🔍</div>
             <h3>AI Operations Audit</h3>
-            <p>We assess your current workflows, reporting processes, and data landscape to pinpoint exactly where AI can save you the most time and money — fast.</p>
+            <p>We assess your workflows, reporting, and data to find exactly where AI saves you the most time and money. You get a clear prioritized roadmap, not a 60 page PDF.</p>
             <a href="services.html" class="card__link">Learn more →</a>
           </div>
           <div class="card fade-up delay-2">
             <div class="card__icon">⚙️</div>
-            <h3>Process Automation &amp; Workflow Optimization</h3>
-            <p>We map your manual bottlenecks and build automated systems that run without babysitting — from daily reporting to production tracking and order management.</p>
+            <h3>Process Automation and Workflow Optimization</h3>
+            <p>We map your manual bottlenecks and build automated systems that run without babysitting, from daily reporting to production tracking and order management.</p>
             <a href="services.html" class="card__link">Learn more →</a>
           </div>
           <div class="card fade-up delay-3">
             <div class="card__icon">🤖</div>
             <h3>Custom AI Tool Builds</h3>
-            <p>Purpose-built AI tools designed around your specific operation. Not generic SaaS — tools built for your floor, your data, your team, your workflows.</p>
+            <p>Purpose built AI tools designed around your specific operation. Not generic software off the shelf. Tools built for your floor, your data, and your team.</p>
             <a href="services.html" class="card__link">Learn more →</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== INTERACTIVE ENGAGE SECTION ===================== -->
+    <section class="engage-section section">
+      <div class="container">
+        <div class="section__header fade-up">
+          <span class="section-label">Free Tools</span>
+          <h2>See Where You Stand Before You Book a Call</h2>
+          <p>Two quick ways to get real value right now and find out whether AI is a fit for your operation.</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="engage-tabs fade-up">
+          <button class="engage-tab active" data-panel="quizPanel">🎯 &nbsp;AI Readiness Quiz</button>
+          <button class="engage-tab" data-panel="roiPanel">💰 &nbsp;ROI Calculator</button>
+        </div>
+
+        <!-- Quiz Panel -->
+        <div class="engage-panel active" id="quizPanel">
+          <div class="quiz-card" id="quizCard">
+            <div class="quiz-progress-bar">
+              <div class="quiz-progress-fill" style="width: 20%;"></div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="quiz-step active">
+              <div class="quiz-step-label">Question 1 of 5</div>
+              <div class="quiz-question">How does your team handle reporting and data collection today?</div>
+              <div class="quiz-options">
+                <button class="quiz-option" data-score="1">All done manually — spreadsheets, email chains, and a lot of back and forth</button>
+                <button class="quiz-option" data-score="2">A mix of tools but still plenty of manual work and copy pasting</button>
+                <button class="quiz-option" data-score="3">Partially automated with some gaps and inconsistencies</button>
+              </div>
+              <div class="quiz-nav">
+                <button class="quiz-back" disabled>← Back</button>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="quiz-step">
+              <div class="quiz-step-label">Question 2 of 5</div>
+              <div class="quiz-question">How much real-time visibility does your team have into daily operations?</div>
+              <div class="quiz-options">
+                <button class="quiz-option" data-score="1">Very little. We find out about problems after the fact</button>
+                <button class="quiz-option" data-score="2">Some visibility but it takes effort to pull together</button>
+                <button class="quiz-option" data-score="3">Pretty solid, though there is room to improve</button>
+              </div>
+              <div class="quiz-nav">
+                <button class="quiz-back">← Back</button>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="quiz-step">
+              <div class="quiz-step-label">Question 3 of 5</div>
+              <div class="quiz-question">How would you describe the typical week for your ops team?</div>
+              <div class="quiz-options">
+                <button class="quiz-option" data-score="1">Mostly firefighting. Reactive all week long</button>
+                <button class="quiz-option" data-score="2">About half planned, half putting out fires</button>
+                <button class="quiz-option" data-score="3">We stay mostly ahead of things with some exceptions</button>
+              </div>
+              <div class="quiz-nav">
+                <button class="quiz-back">← Back</button>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="quiz-step">
+              <div class="quiz-step-label">Question 4 of 5</div>
+              <div class="quiz-question">How reliable and consistent is your operational data?</div>
+              <div class="quiz-options">
+                <button class="quiz-option" data-score="1">Very inconsistent. Lots of errors and missing information</button>
+                <button class="quiz-option" data-score="2">Decent but you have to double check things regularly</button>
+                <button class="quiz-option" data-score="3">Generally reliable and reasonably well organized</button>
+              </div>
+              <div class="quiz-nav">
+                <button class="quiz-back">← Back</button>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="quiz-step">
+              <div class="quiz-step-label">Question 5 of 5</div>
+              <div class="quiz-question">Has your team explored or used any automation or AI tools before?</div>
+              <div class="quiz-options">
+                <button class="quiz-option" data-score="1">Not yet, though we know we should</button>
+                <button class="quiz-option" data-score="2">Looked into it but got overwhelmed by the options</button>
+                <button class="quiz-option" data-score="3">Tried a few things and want to go further</button>
+              </div>
+              <div class="quiz-nav">
+                <button class="quiz-back">← Back</button>
+              </div>
+            </div>
+
+            <!-- Result -->
+            <div class="quiz-result">
+              <div class="quiz-result__score">—</div>
+              <div class="quiz-result__label">Calculating your score...</div>
+              <p class="quiz-result__desc"></p>
+
+              <div class="email-gate">
+                <p>Enter your email and we will send your personalized AI Readiness breakdown with specific next steps for your operation.</p>
+                <form class="email-gate-row" id="quizEmailForm">
+                  <input type="email" placeholder="your@email.com" required autocomplete="email" />
+                  <button type="submit" class="btn btn--primary">Send My Results</button>
+                </form>
+              </div>
+
+              <div style="margin-top: 24px;">
+                <a href="contact.html" class="btn btn--secondary">Book a Free Call Instead →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROI Calculator Panel -->
+        <div class="engage-panel" id="roiPanel">
+          <div class="roi-card" id="roiCard">
+            <h3>What Is Manual Work Actually Costing You?</h3>
+            <p>Move the sliders to match your situation. The result might surprise you.</p>
+
+            <div class="roi-inputs">
+              <div class="roi-input-group">
+                <label for="roiEmployees">
+                  Employees doing manual tasks
+                  <span class="roi-value-display" id="roiEmployeesVal">5 people</span>
+                </label>
+                <input type="range" id="roiEmployees" min="1" max="50" value="5" step="1" />
+              </div>
+
+              <div class="roi-input-group">
+                <label for="roiHours">
+                  Manual hours per person per week
+                  <span class="roi-value-display" id="roiHoursVal">8 hrs/week</span>
+                </label>
+                <input type="range" id="roiHours" min="1" max="40" value="8" step="1" />
+              </div>
+
+              <div class="roi-input-group">
+                <label for="roiRate">
+                  Average fully loaded hourly cost
+                  <span class="roi-value-display" id="roiRateVal">$35/hr</span>
+                </label>
+                <input type="range" id="roiRate" min="15" max="150" value="35" step="5" />
+              </div>
+            </div>
+
+            <div class="roi-result-box">
+              <div class="roi-result-box__label">Annual Cost of Manual Work</div>
+              <div class="roi-result-box__number" id="roiAnnualCost">$75,920</div>
+              <div class="roi-result-box__sub">You could recover up to <strong id="roiPotentialSave" style="color:var(--accent-2);">$49,348</strong> per year with the right automation</div>
+            </div>
+
+            <div class="email-gate">
+              <p>Enter your email and we will send a detailed breakdown of where those hours are going and what automation could realistically recover.</p>
+              <form class="email-gate-row" id="roiEmailForm">
+                <input type="email" placeholder="your@email.com" required autocomplete="email" />
+                <button type="submit" class="btn btn--primary">Send My Breakdown</button>
+              </form>
+            </div>
+
+            <div style="margin-top: 24px; text-align: center;">
+              <a href="contact.html" class="btn btn--secondary">Book a Free Call to Discuss →</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -146,20 +330,20 @@
       <div class="container">
         <div class="stats__grid">
           <div class="stat fade-up">
-            <div class="stat__number">50+</div>
+            <div class="stat__number" id="stat1">50+</div>
             <div class="stat__label">Processes Automated</div>
           </div>
           <div class="stat fade-up delay-1">
-            <div class="stat__number">12 hrs</div>
-            <div class="stat__label">Saved Per Week, On Average</div>
+            <div class="stat__number" id="stat2">12 hrs</div>
+            <div class="stat__label">Saved Per Week on Average</div>
           </div>
           <div class="stat fade-up delay-2">
-            <div class="stat__number">20+</div>
+            <div class="stat__number" id="stat3">20+</div>
             <div class="stat__label">Companies Served</div>
           </div>
           <div class="stat fade-up delay-3">
-            <div class="stat__number">100%</div>
-            <div class="stat__label">ROI-Focused Engagements</div>
+            <div class="stat__number" id="stat4">100%</div>
+            <div class="stat__label">ROI Focused Engagements</div>
           </div>
         </div>
       </div>
@@ -170,8 +354,11 @@
       <div class="container">
         <div class="cta-banner__content fade-up">
           <h2>Ready to See Where AI Can Take Your Operation?</h2>
-          <p>The discovery call is free. We'll identify your biggest opportunity in under an hour — no pitch deck, no pressure.</p>
-          <a href="contact.html" class="btn btn--white btn--lg">Book a Free Discovery Call</a>
+          <p>The discovery call is free. We will identify your biggest opportunity in under an hour. No pitch deck, no pressure.</p>
+          <div class="cta-banner__actions">
+            <a href="contact.html" class="btn btn--white btn--lg">Book a Free Discovery Call</a>
+            <button class="btn btn--outline-white btn--lg" data-open-modal="discovery">Take the Free Assessment</button>
+          </div>
         </div>
       </div>
     </section>
@@ -186,7 +373,7 @@
           <span class="logo-mark">FCG</span>
           <span class="logo-text">Fay Consult Group</span>
         </a>
-        <p class="footer__tagline">AI consulting for operations-driven companies.</p>
+        <p class="footer__tagline">AI consulting for operations driven companies.</p>
       </div>
       <div class="footer__links">
         <h4>Pages</h4>
@@ -209,6 +396,200 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===================== DISCOVERY MODAL ===================== -->
+  <div class="modal-overlay" id="discoveryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close assessment">&times;</button>
+
+      <div class="modal__header">
+        <span class="section-label">Free Assessment</span>
+        <h3 id="modalTitle">Tell Us About Your Operation</h3>
+        <p>10 quick questions. Takes about 3 minutes. We'll follow up with a personalized overview of where AI can help you most.</p>
+      </div>
+
+      <div class="modal-progress-wrap">
+        <div class="modal-progress-track">
+          <div class="modal-progress-fill" style="width: 0%;"></div>
+        </div>
+        <div class="modal-progress-text">
+          <span>Question <span id="modalStepNum">1 of 10</span></span>
+          <span id="modalPct">0% complete</span>
+        </div>
+      </div>
+
+      <form id="modalForm">
+
+        <!-- Q1 -->
+        <div class="modal-step active">
+          <div class="modal-step__question">What type of business do you run?</div>
+          <div class="modal-options">
+            <button type="button" class="modal-option" data-value="Manufacturing">🏭 &nbsp;Manufacturing</button>
+            <button type="button" class="modal-option" data-value="Logistics and Distribution">🚚 &nbsp;Logistics and Distribution</button>
+            <button type="button" class="modal-option" data-value="Supply Chain">🔗 &nbsp;Supply Chain</button>
+            <button type="button" class="modal-option" data-value="Other">💼 &nbsp;Other small or mid-size business</button>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back" id="modalBack" disabled>← Back</button>
+            <button type="button" class="btn btn--primary modal-next" id="modalNext">Next →</button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="modal-step">
+          <div class="modal-step__question">How many people work at your company?</div>
+          <div class="modal-options">
+            <button type="button" class="modal-option" data-value="Under 10">Under 10</button>
+            <button type="button" class="modal-option" data-value="10 to 50">10 to 50</button>
+            <button type="button" class="modal-option" data-value="51 to 100">51 to 100</button>
+            <button type="button" class="modal-option" data-value="101 to 200+">101 to 200 or more</button>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back">← Back</button>
+            <button type="button" class="btn btn--primary modal-next">Next →</button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="modal-step">
+          <div class="modal-step__question">How does your team handle weekly reporting right now?</div>
+          <div class="modal-options">
+            <button type="button" class="modal-option" data-value="Manual spreadsheets">Manual spreadsheets and a lot of back and forth</button>
+            <button type="button" class="modal-option" data-value="Mix of tools">A mix of tools but still a lot of manual work</button>
+            <button type="button" class="modal-option" data-value="Mostly automated">Mostly automated but there are gaps</button>
+            <button type="button" class="modal-option" data-value="Good systems">We have solid systems already in place</button>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back">← Back</button>
+            <button type="button" class="btn btn--primary modal-next">Next →</button>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="modal-step">
+          <div class="modal-step__question">How would you describe your current data situation?</div>
+          <div class="modal-options">
+            <button type="button" class="modal-option" data-value="Scattered">Scattered across systems and hard to pull together</button>
+            <button type="button" class="modal-option" data-value="One place but messy">In one place but messy and inconsistent</button>
+            <button type="button" class="modal-option" data-value="Organized but underused">Fairly organized but not being used well</button>
+            <button type="button" class="modal-option" data-value="Not sure">Honestly not sure</button>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back">← Back</button>
+            <button type="button" class="btn btn--primary modal-next">Next →</button>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="modal-step">
+          <div class="modal-step__question">Where is your team losing the most time right now?</div>
+          <div class="modal-options">
+            <button type="button" class="modal-option" data-value="Manual reporting">Building reports and pulling data by hand</button>
+            <button type="button" class="modal-option" data-value="Chasing updates">Chasing updates and status checks across the team</button>
+            <button type="button" class="modal-option" data-value="Repetitive admin">Repetitive data entry and admin tasks</button>
+            <button type="button" class="modal-option" data-value="Firefighting">Putting out fires instead of working ahead</button>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back">← Back</button>
+            <button type="button" class="btn btn--primary modal-next">Next →</button>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="modal-step">
+          <div class="modal-step__question">Have you explored AI tools for your business before?</div>
+          <div class="modal-options">
+            <button type="button" class="modal-option" data-value="Not yet">Not yet, but I know I should</button>
+            <button type="button" class="modal-option" data-value="Got overwhelmed">Looked into it and got overwhelmed by the options</button>
+            <button type="button" class="modal-option" data-value="Tried but did not stick">Tried a few things but nothing stuck</button>
+            <button type="button" class="modal-option" data-value="Using some now">Using some tools now and want to go further</button>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back">← Back</button>
+            <button type="button" class="btn btn--primary modal-next">Next →</button>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="modal-step">
+          <div class="modal-step__question">How many hours per week does your team spend on tasks that could be automated?</div>
+          <div class="modal-options">
+            <button type="button" class="modal-option" data-value="Under 5 hrs">Less than 5 hours</button>
+            <button type="button" class="modal-option" data-value="5 to 15 hrs">5 to 15 hours</button>
+            <button type="button" class="modal-option" data-value="15 to 30 hrs">15 to 30 hours</button>
+            <button type="button" class="modal-option" data-value="30+ hrs">More than 30 hours</button>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back">← Back</button>
+            <button type="button" class="btn btn--primary modal-next">Next →</button>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="modal-step">
+          <div class="modal-step__question">Who makes the call on new technology investments at your company?</div>
+          <div class="modal-options">
+            <button type="button" class="modal-option" data-value="Owner or founder">Me. I am the owner or founder</button>
+            <button type="button" class="modal-option" data-value="Operations manager">Operations director or plant manager</button>
+            <button type="button" class="modal-option" data-value="Leadership team">It is a leadership team decision</button>
+            <button type="button" class="modal-option" data-value="Still figuring out">Still figuring that out</button>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back">← Back</button>
+            <button type="button" class="btn btn--primary modal-next">Next →</button>
+          </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="modal-step">
+          <div class="modal-step__question">What is your timeline for making a change?</div>
+          <div class="modal-options">
+            <button type="button" class="modal-option" data-value="ASAP">We need help now</button>
+            <button type="button" class="modal-option" data-value="Next 3 months">In the next three months</button>
+            <button type="button" class="modal-option" data-value="6 to 12 months">Sometime in the next six to twelve months</button>
+            <button type="button" class="modal-option" data-value="Just exploring">Just exploring for now</button>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back">← Back</button>
+            <button type="button" class="btn btn--primary modal-next">Next →</button>
+          </div>
+        </div>
+
+        <!-- Q10: Email capture -->
+        <div class="modal-step">
+          <div class="modal-step__question">Last step. Who should we send your personalized assessment to?</div>
+          <div class="modal-final-fields">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="modalName">Your Name</label>
+              <input type="text" id="modalName" name="name" placeholder="Jane Smith" autocomplete="name" required />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="modalEmail">Email Address <span style="color:var(--accent-1);">*</span></label>
+              <input type="email" id="modalEmail" name="email" placeholder="jane@company.com" autocomplete="email" required />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="modalPhone">Phone <span style="font-weight:400;color:var(--text-muted);">(optional)</span></label>
+              <input type="tel" id="modalPhone" name="phone" placeholder="(215) 555-0100" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="modal-nav" style="margin-top: 20px;">
+            <button type="button" class="modal-back">← Back</button>
+            <button type="submit" class="btn btn--primary modal-next">Send My Assessment →</button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Thank you state -->
+      <div class="modal-thanks">
+        <div class="modal-thanks__icon">🎉</div>
+        <h3>You are all set!</h3>
+        <p>We will review your responses and send you a personalized assessment within one business day. Keep an eye on your inbox.</p>
+        <a href="contact.html" class="btn btn--primary btn--lg">Book a Discovery Call Now</a>
+      </div>
+
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
