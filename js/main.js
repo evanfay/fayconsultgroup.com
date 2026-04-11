@@ -179,52 +179,10 @@
   }
 
   /* ----------------------------------------
-     6. Hero typing / morphing headline
+     6. Lucide icons
   ---------------------------------------- */
-  var typedEl = document.getElementById('typedText');
-  if (typedEl) {
-    var phrases = [
-      'We make sure it actually does.',
-      'We find what works for your floor.',
-      'We build it with your team.',
-    ];
-    var phraseIndex  = 0;
-    var charIndex    = 0;
-    var isDeleting   = false;
-    var typeSpeed    = 52;
-    var deleteSpeed  = 28;
-    var pauseAfter   = 2400;
-    var pauseBefore  = 500;
-
-    function type() {
-      var current = phrases[phraseIndex];
-
-      if (isDeleting) {
-        charIndex--;
-        typedEl.textContent = current.substring(0, charIndex);
-        if (charIndex === 0) {
-          isDeleting = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length;
-          setTimeout(type, pauseBefore);
-          return;
-        }
-        setTimeout(type, deleteSpeed);
-      } else {
-        charIndex++;
-        typedEl.textContent = current.substring(0, charIndex);
-        if (charIndex === current.length) {
-          setTimeout(function () {
-            isDeleting = true;
-            type();
-          }, pauseAfter);
-          return;
-        }
-        setTimeout(type, typeSpeed);
-      }
-    }
-
-    // Start after hero entrance animation settles
-    setTimeout(type, 900);
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
   }
 
   /* ----------------------------------------
