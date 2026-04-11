@@ -206,6 +206,19 @@ p  { font-size: 1rem; color: var(--text-body); line-height: 1.7; }
   color: var(--text-heading);
 }
 
+/* Logo image in nav */
+.nav__logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.nav__logo:has(.nav__logo-img) {
+  gap: 0;
+}
+
 .nav__links {
   display: flex;
   align-items: center;
