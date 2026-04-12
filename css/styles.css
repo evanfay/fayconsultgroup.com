@@ -2075,9 +2075,9 @@ input[type="range"]::-moz-range-thumb {
   .hero__actions { flex-direction: column; align-items: stretch; }
   .hero__actions .btn { justify-content: center; }
 
-  /* Orbs: reduce size on mobile */
-  .orb-1 { width: 280px; height: 280px; }
-  .orb-2 { width: 200px; height: 200px; }
+  /* Orbs: adjust for mobile */
+  .orb-1 { width: 320px; height: 320px; top: -60px; left: -60px; opacity: 0.2; }
+  .orb-2 { width: 260px; height: 260px; top: 30%; right: -60px; opacity: 0.18; }
   .orb-3 { display: none; }
 
   /* Grids */
