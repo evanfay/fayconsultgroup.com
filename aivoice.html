@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anna answers your business calls 24/7 so you never miss another job. Built for plumbers, restoration companies, and contractors in PA, NJ, MD, and DE. Call the demo line and try her yourself." />
+  <title>Anna — 24/7 AI Receptionist for Plumbers &amp; Contractors | Fay Consult Group</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* ===================== Page: AI Voice (Anna) ===================== */
+    .phone-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      color: var(--white);
+      background: var(--accent-gradient);
+      padding: 20px 40px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-amber);
+      transition: all var(--transition);
+    }
+    .phone-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 44px rgba(249, 115, 22, 0.4); }
+    .phone-cta.on-dark { background: var(--white); color: var(--accent-1); box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    .phone-cta.on-dark:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.18); }
+    .phone-note { margin-top: 18px; font-size: 0.92rem; color: var(--text-muted); }
+    .phone-note.on-dark { color: rgba(255,255,255,0.75); }
+
+    /* Math band */
+    .math-band {
+      background: var(--bg-alt);
+      border-top: 1px solid rgba(0,0,0,0.07);
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      padding: 64px 0;
+    }
+    .math-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .math-item__big {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .math-item p { font-size: 0.9rem; color: var(--text-muted); }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; counter-reset: step; }
+    .step {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: var(--radius-lg);
+      padding: 36px 30px 30px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: all var(--transition);
+    }
+    .step:hover { transform: translateY(-6px); box-shadow: var(--shadow-md), 0 0 0 1px rgba(249, 115, 22, 0.10); }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      top: -18px; left: 28px;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--accent-gradient);
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+    }
+    .step h3 { margin: 10px 0 8px; }
+    .step p { font-size: 0.94rem; color: var(--text-muted); }
+
+    /* Final CTA alt link */
+    .cta-banner__alt { margin-top: 22px; font-size: 0.92rem; color: rgba(255,255,255,0.75); }
+    .cta-banner__alt a { color: var(--white); text-decoration: underline; font-weight: 600; }
+
+    @media (max-width: 900px) {
+      .math-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNHFNSK25P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CNHFNSK25P');
+  </script>
+</head>
+<body>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition-overlay" id="pageTransition"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Fay Consult Group Home">
+        <img src="images/logo.png" alt="Fay Consult Group" class="nav__logo-img" />
+        <span class="logo-text">Fay Consult Group</span>
+      </a>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="about.html"    class="nav__link">About</a></li>
+        <li><a href="contact.html"  class="nav__link">Contact</a></li>
+      </ul>
+      <a href="tel:+16108846159" class="btn btn--primary nav__cta">Call Anna: (610) 884-6159</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+
+      <div class="container">
+        <div class="hero__content" style="text-align:center; max-width: 760px; margin: 0 auto;">
+          <span class="hero__eyebrow">Live demo line — she picks up right now</span>
+          <h1>Every Missed Call Is a Job That Went to <span class="hero-accent">Someone Else</span></h1>
+          <p class="hero__sub" style="margin-left:auto; margin-right:auto;">
+            Anna is an AI receptionist that answers your line 24/7 — after hours, on the job, on weekends. She books the appointment, takes the details, and texts you the lead. Don't take our word for it. Call her.
+          </p>
+          <div class="hero__actions" style="justify-content:center; flex-direction:column;">
+            <a class="phone-cta" href="tel:+16108846159">📞 (610) 884-6159</a>
+            <p class="phone-note">Try to stump her. Ask about pricing, scheduling, a flooded basement — anything.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BUILT FOR THE TRADES ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header fade-up">
+          <span class="section-label">Built for the trades</span>
+          <h2>Made for Plumbers, Restoration Crews, and Contractors</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card fade-up delay-1">
+            <div class="card__icon"><i data-lucide="moon"></i></div>
+            <h3>After-Hours Coverage</h3>
+            <p>The 5pm-to-8am window is where emergency jobs live and voicemail loses them. Anna covers only the hours nobody else does — nothing about your daytime setup has to change.</p>
+          </div>
+          <div class="card fade-up delay-2">
+            <div class="card__icon"><i data-lucide="calendar-check"></i></div>
+            <h3>She Books, Not Just Answers</h3>
+            <p>Anna doesn't take messages and hope. She checks availability, books the appointment on your calendar, and sends the customer a confirmation.</p>
+          </div>
+          <div class="card fade-up delay-3">
+            <div class="card__icon"><i data-lucide="message-square-text"></i></div>
+            <h3>Every Lead, Texted to You</h3>
+            <p>Name, number, address, what's wrong, how urgent. Every call summarized and sent to your phone the moment it ends — so you decide what's worth a callback tonight.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== THE MATH ===================== -->
+    <section class="math-band">
+      <div class="container">
+        <span class="section-label" style="display:block; text-align:center;">The math</span>
+        <h2 style="margin-bottom:40px;">What a Missed Call Actually Costs</h2>
+        <div class="math-grid">
+          <div class="math-item fade-up delay-1">
+            <div class="math-item__big">~40%</div>
+            <p>of calls to trades businesses go unanswered after hours</p>
+          </div>
+          <div class="math-item fade-up delay-2">
+            <div class="math-item__big">$300+</div>
+            <p>average value of a single emergency service call</p>
+          </div>
+          <div class="math-item fade-up delay-3">
+            <div class="math-item__big">80%</div>
+            <p>of callers who hit voicemail just call the next company</p>
+          </div>
+          <div class="math-item fade-up">
+            <div class="math-item__big">1 call</div>
+            <p>saved per month typically pays for Anna outright</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header fade-up">
+          <span class="section-label">How it works</span>
+          <h2>Live on Your Line in Under a Week</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step fade-up delay-1">
+            <h3>Call the demo</h3>
+            <p>Talk to Anna yourself at (610) 884-6159. Two minutes tells you more than any sales page.</p>
+          </div>
+          <div class="step fade-up delay-2">
+            <h3>We set her up</h3>
+            <p>We forward your missed and after-hours calls to Anna and train her on your services, service area, and pricing.</p>
+          </div>
+          <div class="step fade-up delay-3">
+            <h3>She starts catching jobs</h3>
+            <p>You get a text summary of every call and a booked calendar. Cancel anytime — no contracts, no hardware, no changes to your number.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner__content fade-up">
+          <h2>The Demo Is a Phone Call Away</h2>
+          <p>No sign-up. No sales call. Just dial the number and see if she's good enough for your customers.</p>
+          <a class="phone-cta on-dark" href="tel:+16108846159">📞 (610) 884-6159</a>
+          <p class="cta-banner__alt">Prefer email? <a href="mailto:evan@fayconsultgroup.com">evan@fayconsultgroup.com</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" aria-label="Fay Consult Group Home">
+          <img src="images/logo.png" alt="Fay Consult Group" class="nav__logo-img" />
+        <span class="logo-text">Fay Consult Group</span>
+        </a>
+        <p class="footer__tagline">AI consulting for operations driven companies.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Pages</h4>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="discovery/law-firm.html" style="opacity:0.45;font-size:0.82rem;">Discovery Forms</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contact</h4>
+        <p><a href="mailto:evan@fayconsultgroup.com">evan@fayconsultgroup.com</a></p>
+        <p>Serving PA &middot; NJ &middot; MD &middot; DE</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 Fay Consult Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
