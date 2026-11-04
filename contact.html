@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Fay Consult Group. Book a free AI discovery call or send a message. Serving small and mid-size companies across PA, NJ, MD, and DE." />
-  <title>Contact — Fay Consult Group</title>
+  <title>Free Response-Time Test &amp; Contact | Fay Consult Group</title>
+  <meta name="description" content="Find out how fast your business really responds to new leads. We send an ordinary inquiry, time the response, and show you what your customers experience. Free, no obligation." />
+  <link rel="canonical" href="https://fayconsultgroup.com/contact.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fay Consult Group" />
+  <meta property="og:title" content="Free Response-Time Test &amp; Contact | Fay Consult Group" />
+  <meta property="og:description" content="Find out how fast your business really responds to new leads. We send an ordinary inquiry, time the response, and show you what your customers experience. Free, no obligation." />
+  <meta property="og:url" content="https://fayconsultgroup.com/contact.html" />
+  <meta property="og:image" content="https://fayconsultgroup.com/images/og-logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#F97316" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,13 +23,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/logo.png" />
-  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="icon" type="image/png" href="images/logo-sm.png" />
+  <link rel="apple-touch-icon" href="images/logo-sm.png" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics (GA4). Events: cta_click, generate_lead (see js/main.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNHFNSK25P"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -26,183 +37,260 @@
     gtag('js', new Date());
     gtag('config', 'G-CNHFNSK25P');
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Fay Consult Group",
+  "url": "https://fayconsultgroup.com/",
+  "logo": "https://fayconsultgroup.com/images/og-logo.png",
+  "image": "https://fayconsultgroup.com/images/og-logo.png",
+  "email": "evan@fayconsultgroup.com",
+  "description": "Speed to lead service for local small businesses: every new lead gets a real response in under a minute, by text, call, and email.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Phoenixville",
+    "addressRegion": "PA",
+    "postalCode": "19460",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Chester County, PA"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Berks County, PA"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Montgomery County, PA"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Delaware County, PA"
+    },
+    {
+      "@type": "State",
+      "name": "Pennsylvania"
+    },
+    {
+      "@type": "State",
+      "name": "Delaware"
+    },
+    {
+      "@type": "State",
+      "name": "New Jersey"
+    }
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Evan Fay"
+  },
+  "knowsAbout": [
+    "Speed to lead",
+    "Lead response automation",
+    "Missed call text back",
+    "AI receptionist",
+    "Small business automation"
+  ]
+}
+  </script>
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Page transition overlay -->
   <div class="page-transition-overlay" id="pageTransition"></div>
 
   <!-- ===================== NAV ===================== -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Main">
     <div class="container nav__inner">
-      <a href="index.html" class="nav__logo" aria-label="Fay Consult Group Home">
-        <img src="images/logo.png" alt="Fay Consult Group" class="nav__logo-img" />
+      <a href="index.html" class="nav__logo" aria-label="Fay Consult Group home">
+        <img src="images/logo-sm.png" alt="" class="nav__logo-img" width="48" height="48" />
         <span class="logo-text">Fay Consult Group</span>
       </a>
       <ul class="nav__links" id="navLinks" role="list">
-        <li><a href="index.html"    class="nav__link">Home</a></li>
-        <li><a href="services.html" class="nav__link">Services</a></li>
-        <li><a href="about.html"    class="nav__link">About</a></li>
-        <li><a href="contact.html"  class="nav__link">Contact</a></li>
+        <li><a href="speed-to-lead.html" class="nav__link">Speed to Lead</a></li>
+        <li><a href="who-its-for.html" class="nav__link">Who It&#x27;s For</a></li>
+        <li><a href="voice-assistants.html" class="nav__link">Voice Assistants</a></li>
+        <li><a href="automation.html" class="nav__link">Automation</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
       </ul>
-      <a href="contact.html" class="btn btn--primary nav__cta">Book a Call</a>
-      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <a href="contact.html#test" class="btn btn--primary nav__cta" data-track="nav_free_test">Get a free response-time test</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <main>
+  <main id="main">
 
     <!-- ===================== PAGE HERO ===================== -->
     <section class="page-hero">
       <div class="container">
-        <div class="page-hero__content fade-up">
-          <span class="section-label">Get In Touch</span>
-          <h1>Start the Conversation. The First Call Is Free.</h1>
-          <p>No pitch, no pressure. Tell us about your operation and we will tell you honestly where AI can help and where it probably cannot.</p>
+        <div class="page-hero__content">
+          <span class="hero__eyebrow">Free response-time test</span>
+          <h1>See what your customers experience.</h1>
+          <p>We'll contact your business the same way an ordinary customer would, then tell you how long it took to hear back and what the experience was like. It's free, and the results are yours whether or not you work with us.</p>
         </div>
       </div>
     </section>
 
-    <!-- ===================== CONTACT SECTION ===================== -->
-    <section class="contact-section">
+    <!-- ===================== FORM + DETAILS ===================== -->
+    <section class="contact-section section--alt" id="test">
       <div class="container">
         <div class="grid-2">
 
-          <!-- Left Column -->
           <div class="contact-left fade-up">
-            <h2>Let's Talk About Your Operation.</h2>
-            <p>
-              The best way to figure out whether we are a fit is a 30 minute discovery call. We will ask about your current workflows, where your team is losing time, and what your data situation looks like. From there we can give you an honest read on what AI can realistically do for your operation and what it would take to get there.
-            </p>
+            <h2>How the test works</h2>
+            <ul class="benefits-list" role="list">
+              <li class="benefit-item">You tell us about your business with the form.</li>
+              <li class="benefit-item">We send your business an ordinary inquiry, the way any customer would. Nothing tricky.</li>
+              <li class="benefit-item">We time the response and note what the customer experience was like.</li>
+              <li class="benefit-item">You get a short report with a few practical fixes.</li>
+            </ul>
 
-            <!-- Book a Call button -->
-            <!-- Replace with your Google Calendar appointment scheduling link -->
-            <div class="contact-cal-btn">
-              <a
-                href="https://calendar.app.google/FocAjrRYRFWKcmJGA"
-                class="btn btn--primary btn--lg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                📅 &nbsp;Book a Free Discovery Call
-              </a>
-              <!-- Replace with your Google Calendar appointment scheduling link -->
-            </div>
-
-            <div class="contact-divider">or reach out directly</div>
-
-            <div class="contact-email-row">
-              <span class="email-icon">✉️</span>
-              <a href="mailto:evan@fayconsultgroup.com">evan@fayconsultgroup.com</a>
-            </div>
-
-            <!-- Trust signals -->
-            <div style="margin-top: 48px; display: flex; flex-direction: column; gap: 18px;">
-              <div style="display: flex; align-items: flex-start; gap: 14px;">
-                <span style="font-size: 1.2rem; flex-shrink: 0; margin-top: 2px;">✅</span>
+            <div class="contact-points">
+              <div class="contact-point">
+                <div class="card__icon"><i data-lucide="calendar" aria-hidden="true"></i></div>
                 <div>
-                  <strong style="font-family: var(--font-body); font-size: 0.92rem; color: var(--text-heading); display: block; margin-bottom: 2px;">Free 30 Minute Discovery Call</strong>
-                  <span style="font-size: 0.88rem; color: var(--text-muted);">No commitment, no sales script. Just an honest conversation.</span>
+                  <strong>Rather just talk?</strong>
+                  <p>Book a 20-minute call. <a href="https://calendar.app.google/FocAjrRYRFWKcmJGA" target="_blank" rel="noopener" data-track="contact_book_call">Pick a time &rarr;</a></p>
                 </div>
               </div>
-              <div style="display: flex; align-items: flex-start; gap: 14px;">
-                <span style="font-size: 1.2rem; flex-shrink: 0; margin-top: 2px;">✅</span>
+              <div class="contact-point">
+                <div class="card__icon"><i data-lucide="mail" aria-hidden="true"></i></div>
                 <div>
-                  <strong style="font-family: var(--font-body); font-size: 0.92rem; color: var(--text-heading); display: block; margin-bottom: 2px;">You Will Talk Directly to Evan</strong>
-                  <span style="font-size: 0.88rem; color: var(--text-muted);">No account managers or junior staff. Ever.</span>
+                  <strong>Email</strong>
+                  <p><a href="mailto:evan@fayconsultgroup.com" data-track="contact_email">evan@fayconsultgroup.com</a></p>
                 </div>
               </div>
-              <div style="display: flex; align-items: flex-start; gap: 14px;">
-                <span style="font-size: 1.2rem; flex-shrink: 0; margin-top: 2px;">✅</span>
+              <!-- TODO(Evan): add a business phone number here (with a tel: link) for click-to-call,
+                   and add it to the sticky mobile bar in the shared footer. -->
+              <div class="contact-point">
+                <div class="card__icon"><i data-lucide="map-pin" aria-hidden="true"></i></div>
                 <div>
-                  <strong style="font-family: var(--font-body); font-size: 0.92rem; color: var(--text-heading); display: block; margin-bottom: 2px;">Serving PA, NJ, MD, and DE</strong>
-                  <span style="font-size: 0.88rem; color: var(--text-muted);">Local to your market, on site when it matters.</span>
-                </div>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: 14px;">
-                <span style="font-size: 1.2rem; flex-shrink: 0; margin-top: 2px;">✅</span>
-                <div>
-                  <strong style="font-family: var(--font-body); font-size: 0.92rem; color: var(--text-heading); display: block; margin-bottom: 2px;">Not Ready to Call Yet?</strong>
-                  <span style="font-size: 0.88rem; color: var(--text-muted);">
-                    <button style="background:none;border:none;color:var(--accent-1);font-weight:600;font-size:0.88rem;cursor:pointer;padding:0;font-family:var(--font-body);" data-open-modal="discovery">Take the free 10-question assessment instead →</button>
-                  </span>
+                  <strong>Based in Phoenixville, PA</strong>
+                  <p>Serving Chester, Berks, Montgomery, and Delaware counties, with remote setup across PA, DE, and NJ.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Right Column: Contact Form -->
           <div class="contact-form-card fade-up delay-2">
-            <h3>Send Us a Message</h3>
+            <!-- Backend: Formspree (same endpoint as the old contact form), see FORM_ENDPOINT in js/main.js.
+                 TODO(Evan): confirm the form backend you want long term (Formspree, Make.com webhook, or Apps Script). -->
+            <form id="testForm" action="https://formspree.io/f/mnjoeolv" method="POST" novalidate>
+              <h3>Request your free test</h3>
+              <input type="hidden" name="_subject" value="New response-time test request" />
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
 
-            <!--
-              Formspree form.
-              Replace YOUR_FORM_ID with your endpoint after signing up at formspree.io
-            -->
-            <form
-              id="contactForm"
-              action="https://formspree.io/f/mnjoeolv"
-              method="POST"
-            >
-              <!-- Replace YOUR_FORM_ID with your Formspree endpoint after signing up at formspree.io -->
-
-              <div class="form-row" style="margin-bottom: 20px;">
+              <div class="form-row">
                 <div class="form-group">
-                  <label for="name">Full Name <span style="color:var(--accent-1);">*</span></label>
-                  <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+                  <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="f-name" name="name" autocomplete="name" required />
                 </div>
                 <div class="form-group">
-                  <label for="company">Company Name <span style="color:var(--accent-1);">*</span></label>
-                  <input type="text" id="company" name="company" placeholder="Acme Manufacturing" required autocomplete="organization" />
-                </div>
-              </div>
-
-              <div class="form-row" style="margin-bottom: 20px;">
-                <div class="form-group">
-                  <label for="email">Email Address <span style="color:var(--accent-1);">*</span></label>
-                  <input type="email" id="email" name="email" placeholder="jane@acme.com" required autocomplete="email" />
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone <span style="font-weight:400; color:var(--text-muted);">(optional)</span></label>
-                  <input type="tel" id="phone" name="phone" placeholder="(215) 555-0100" autocomplete="tel" />
+                  <label for="f-business">Business name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="f-business" name="business_name" autocomplete="organization" required />
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="interest">What Are You Interested In? <span style="color:var(--accent-1);">*</span></label>
-                <select id="interest" name="interest" required>
-                  <option value="" disabled selected>Select a service...</option>
-                  <option value="AI Operations Audit">AI Operations Audit</option>
-                  <option value="Process Automation">Process Automation and Workflow Optimization</option>
-                  <option value="Custom AI Tool Build">Custom AI Tool Build</option>
-                  <option value="General Inquiry">General Inquiry</option>
-                </select>
+                <label for="f-website">Website</label>
+                <input type="url" id="f-website" name="website" autocomplete="url" placeholder="https://" />
               </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+                  <input type="tel" id="f-phone" name="phone" autocomplete="tel" required />
+                </div>
+                <div class="form-group">
+                  <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+                  <input type="email" id="f-email" name="email" autocomplete="email" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-industry">Industry</label>
+                  <select id="f-industry" name="industry">
+                    <option value="">Choose one</option>
+                    <option>Roofing &amp; exteriors</option>
+                    <option>HVAC</option>
+                    <option>Plumbing &amp; electrical</option>
+                    <option>Restoration</option>
+                    <option>Landscaping &amp; hardscaping</option>
+                    <option>Remodeling &amp; contracting</option>
+                    <option>Pest control</option>
+                    <option>Event venue</option>
+                    <option>Salon, med spa, or clinic</option>
+                    <option>Auto services</option>
+                    <option>Cleaning services</option>
+                    <option>Legal, accounting, or professional services</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="f-leads">New leads per month</label>
+                  <select id="f-leads" name="monthly_leads">
+                    <option value="">Choose one</option>
+                    <option>Under 10</option>
+                    <option>10 to 25</option>
+                    <option>25 to 50</option>
+                    <option>50 to 100</option>
+                    <option>More than 100</option>
+                    <option>Not sure</option>
+                  </select>
+                </div>
+              </div>
+
+              <fieldset class="form-group">
+                <legend>How do leads reach you today?</legend>
+                <div class="check-grid">
+                  <label class="check"><input type="checkbox" name="lead_sources" value="Phone calls" /> Phone calls</label>
+                  <label class="check"><input type="checkbox" name="lead_sources" value="Website form" /> Website form</label>
+                  <label class="check"><input type="checkbox" name="lead_sources" value="Facebook / Instagram" /> Facebook / Instagram</label>
+                  <label class="check"><input type="checkbox" name="lead_sources" value="Google (Business Profile or LSA)" /> Google (Business Profile or ads)</label>
+                  <label class="check"><input type="checkbox" name="lead_sources" value="Directories (Angi, Thumbtack, Yelp, etc.)" /> Angi, Thumbtack, Yelp, etc.</label>
+                  <label class="check"><input type="checkbox" name="lead_sources" value="Email" /> Email</label>
+                  <label class="check"><input type="checkbox" name="lead_sources" value="Text messages" /> Text messages</label>
+                  <label class="check"><input type="checkbox" name="lead_sources" value="Other" /> Other</label>
+                </div>
+              </fieldset>
 
               <div class="form-group">
-                <label for="message">Tell Us About Your Operation <span style="color:var(--accent-1);">*</span></label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="What does your operation look like? Where are you losing the most time or visibility right now? Any context helps."
-                  required
-                  rows="5"
-                ></textarea>
+                <label for="f-notes">Anything else? <span class="muted" style="font-weight:400">(optional)</span></label>
+                <textarea id="f-notes" name="notes" rows="3"></textarea>
               </div>
 
-              <!-- Honeypot spam field -->
-              <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off" />
+              <div class="consent">
+                <label class="check">
+                  <input type="checkbox" name="contact_consent" value="Yes" required />
+                  <span>I agree to be contacted by Fay Consult Group by phone and email about this request. <span class="req" aria-hidden="true">*</span></span>
+                </label>
+              </div>
+              <div class="consent">
+                <label class="check">
+                  <input type="checkbox" name="sms_consent" value="Yes" />
+                  <span>Optional: I agree to receive text messages from Fay Consult Group about my request. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">SMS Terms</a>.</span>
+                </label>
+              </div>
 
-              <button type="submit" class="btn btn--primary form-submit">Send Message →</button>
+              <button type="submit" class="btn btn--primary form-submit" data-track="contact_submit_test">Request my free test</button>
+              <p class="form-note">We usually reply within a few hours. We practice what we preach.</p>
             </form>
 
-            <div id="contactSuccess" style="display:none; text-align:center; padding: 32px 24px;">
-              <div style="font-size:2.2rem; margin-bottom:14px;">✅</div>
-              <h3 style="margin-bottom:10px;">Message received!</h3>
-              <p style="color:var(--text-muted);">We will be in touch within one business day. In the meantime, feel free to book a call directly.</p>
-              <a href="https://calendar.app.google/FocAjrRYRFWKcmJGA" class="btn btn--primary" style="margin-top:20px;" target="_blank" rel="noopener noreferrer">Book a Discovery Call →</a>
+            <div class="form-success" id="testSuccess" role="status">
+              <div class="form-success__icon" aria-hidden="true">&#10003;</div>
+              <h3>Got it. Thank you!</h3>
+              <p>We'll be in touch within a few hours. Keep an eye on your phone and inbox.</p>
+              <p class="mt-md"><a href="https://calendar.app.google/FocAjrRYRFWKcmJGA" class="btn btn--secondary" target="_blank" rel="noopener" data-track="contact_success_book">Want to talk sooner? Book a call</a></p>
             </div>
           </div>
 
@@ -216,65 +304,54 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="index.html" class="nav__logo" aria-label="Fay Consult Group Home">
-          <img src="images/logo.png" alt="Fay Consult Group" class="nav__logo-img" />
-        <span class="logo-text">Fay Consult Group</span>
+        <a href="index.html" class="nav__logo" aria-label="Fay Consult Group home">
+          <img src="images/logo-sm.png" alt="" class="nav__logo-img" width="48" height="48" loading="lazy" />
+          <span class="logo-text">Fay Consult Group</span>
         </a>
-        <p class="footer__tagline">AI consulting for operations driven companies.</p>
+        <p class="footer__tagline">Every new lead gets a real response in under a minute, so you stop losing jobs to whoever answered first.</p>
       </div>
       <div class="footer__links">
-        <h4>Pages</h4>
+        <h4>Services</h4>
         <ul role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="speed-to-lead.html">Speed to Lead</a></li>
+          <li><a href="who-its-for.html">Who It's For</a></li>
+          <li><a href="voice-assistants.html">AI Voice Assistants</a></li>
+          <li><a href="automation.html">AI Automation &amp; Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Company</h4>
+        <ul role="list">
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; SMS Terms</a></li>
           <li><a href="discovery/law-firm.html" style="opacity:0.45;font-size:0.82rem;">Discovery Forms</a></li>
         </ul>
       </div>
       <div class="footer__contact">
         <h4>Contact</h4>
         <p><a href="mailto:evan@fayconsultgroup.com">evan@fayconsultgroup.com</a></p>
-        <p>Serving PA &middot; NJ &middot; MD &middot; DE</p>
+        <!-- TODO(Evan): confirm whether to show the street address (140 Church St) publicly. -->
+        <p>Phoenixville, PA (Chester County)</p>
+        <p>Serving Chester, Berks, Montgomery &amp; Delaware counties, plus remote setup across PA, DE &amp; NJ.</p>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <p>&copy; 2026 Fay Consult Group. All rights reserved.</p>
+        <p class="footer__disclaimer">Compliance information on this site describes how we set up our systems. It is general information, not legal advice. Talk to your attorney about the rules that apply to your business.</p>
+        <p>&copy; <span data-year>2026</span> Fay Consult Group. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- ===================== DISCOVERY MODAL ===================== -->
-  <div class="modal-overlay" id="discoveryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal">
-      <button class="modal__close" aria-label="Close assessment">&times;</button>
-      <div class="modal__header">
-        <span class="section-label">Free Assessment</span>
-        <h3 id="modalTitle">Tell Us About Your Operation</h3>
-        <p>10 quick questions. Takes about 3 minutes. We will follow up with a personalized overview of where AI can help you most.</p>
-      </div>
-      <div class="modal-progress-wrap">
-        <div class="modal-progress-track"><div class="modal-progress-fill" style="width:0%;"></div></div>
-        <div class="modal-progress-text"><span>Question <span id="modalStepNum">1 of 10</span></span></div>
-      </div>
-      <form id="modalForm">
-        <div class="modal-step active"><div class="modal-step__question">What type of business do you run?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Manufacturing">🏭 &nbsp;Manufacturing</button><button type="button" class="modal-option" data-value="Logistics">🚚 &nbsp;Logistics and Distribution</button><button type="button" class="modal-option" data-value="Supply Chain">🔗 &nbsp;Supply Chain</button><button type="button" class="modal-option" data-value="Other">💼 &nbsp;Other small or mid-size business</button></div><div class="modal-nav"><button type="button" class="modal-back" id="modalBack" disabled>← Back</button><button type="button" class="btn btn--primary modal-next" id="modalNext">Next →</button></div></div>
-        <div class="modal-step"><div class="modal-step__question">How many people work at your company?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Under 10">Under 10</button><button type="button" class="modal-option" data-value="10 to 50">10 to 50</button><button type="button" class="modal-option" data-value="51 to 100">51 to 100</button><button type="button" class="modal-option" data-value="101+">101 to 200 or more</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
-        <div class="modal-step"><div class="modal-step__question">How does your team handle weekly reporting?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Manual">Manual spreadsheets and back and forth</button><button type="button" class="modal-option" data-value="Mix">A mix of tools with lots of manual work</button><button type="button" class="modal-option" data-value="Mostly auto">Mostly automated but gaps remain</button><button type="button" class="modal-option" data-value="Good">We have solid systems already</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
-        <div class="modal-step"><div class="modal-step__question">How would you describe your current data situation?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Scattered">Scattered and hard to pull together</button><button type="button" class="modal-option" data-value="Messy">In one place but messy</button><button type="button" class="modal-option" data-value="Organized">Organized but underused</button><button type="button" class="modal-option" data-value="Unsure">Not sure</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
-        <div class="modal-step"><div class="modal-step__question">Where is your team losing the most time?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Reporting">Building reports and pulling data</button><button type="button" class="modal-option" data-value="Chasing">Chasing updates and status checks</button><button type="button" class="modal-option" data-value="Admin">Repetitive data entry and admin</button><button type="button" class="modal-option" data-value="Fires">Putting out fires instead of planning</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
-        <div class="modal-step"><div class="modal-step__question">Have you explored AI tools for your business?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Not yet">Not yet, but I know I should</button><button type="button" class="modal-option" data-value="Overwhelmed">Looked into it and got overwhelmed</button><button type="button" class="modal-option" data-value="Tried">Tried a few things, nothing stuck</button><button type="button" class="modal-option" data-value="Using">Using some tools and want to do more</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
-        <div class="modal-step"><div class="modal-step__question">How many hours per week on tasks that could be automated?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Under 5">Less than 5 hours</button><button type="button" class="modal-option" data-value="5 to 15">5 to 15 hours</button><button type="button" class="modal-option" data-value="15 to 30">15 to 30 hours</button><button type="button" class="modal-option" data-value="30+">More than 30 hours</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
-        <div class="modal-step"><div class="modal-step__question">Who makes the call on new technology investments?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Owner">Me. I am the owner or founder</button><button type="button" class="modal-option" data-value="Ops">Operations director or plant manager</button><button type="button" class="modal-option" data-value="Leadership">A leadership team decision</button><button type="button" class="modal-option" data-value="TBD">Still figuring that out</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
-        <div class="modal-step"><div class="modal-step__question">What is your timeline for making a change?</div><div class="modal-options"><button type="button" class="modal-option" data-value="Now">We need help now</button><button type="button" class="modal-option" data-value="3mo">In the next three months</button><button type="button" class="modal-option" data-value="6to12">Six to twelve months</button><button type="button" class="modal-option" data-value="Exploring">Just exploring for now</button></div><div class="modal-nav"><button type="button" class="modal-back">← Back</button><button type="button" class="btn btn--primary modal-next">Next →</button></div></div>
-        <div class="modal-step"><div class="modal-step__question">Last step. Who should we send your personalized assessment to?</div><div class="modal-final-fields"><div class="form-group" style="margin-bottom:0;"><label for="modalName">Your Name</label><input type="text" id="modalName" name="name" placeholder="Jane Smith" autocomplete="name" /></div><div class="form-group" style="margin-bottom:0;"><label for="modalEmail">Email Address <span style="color:var(--accent-1);">*</span></label><input type="email" id="modalEmail" name="email" placeholder="jane@company.com" autocomplete="email" required /></div><div class="form-group" style="margin-bottom:0;"><label for="modalPhone">Phone <span style="font-weight:400;color:var(--text-muted);">(optional)</span></label><input type="tel" id="modalPhone" name="phone" placeholder="(215) 555-0100" autocomplete="tel" /></div></div><div class="modal-nav" style="margin-top:20px;"><button type="button" class="modal-back">← Back</button><button type="submit" class="btn btn--primary">Send My Assessment →</button></div></div>
-      </form>
-      <div class="modal-thanks"><div class="modal-thanks__icon">🎉</div><h3>You are all set!</h3><p>We will review your responses and send you a personalized assessment within one business day.</p><a href="contact.html" class="btn btn--primary btn--lg">Book a Discovery Call Now</a></div>
-    </div>
+  <!-- Sticky call-to-action on phones -->
+  <div class="mobile-cta" aria-label="Quick actions">
+    <a href="contact.html#test" class="btn btn--primary" data-track="sticky_free_test">Free response-time test</a>
+    <a href="https://calendar.app.google/FocAjrRYRFWKcmJGA" class="btn btn--secondary" target="_blank" rel="noopener" data-track="sticky_book_call">Book a call</a>
   </div>
 
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

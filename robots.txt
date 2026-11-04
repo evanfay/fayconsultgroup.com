@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /discovery/
+
+Sitemap: https://fayconsultgroup.com/sitemap.xml
