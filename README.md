@@ -10,7 +10,7 @@ assistants and AI automation as add-ons.
 
 ```
 ├── index.html              # Home: speed-to-lead pitch, proof, CTA
-├── speed-to-lead.html      # Main offer: sources, features, compliance, onboarding, pricing, ROI calc, FAQ
+├── speed-to-lead.html      # Main offer: sources, features, compliance, onboarding, ROI calc, FAQ (no pricing, by choice)
 ├── who-its-for.html        # Who it's for + industry cards + service area
 ├── voice-assistants.html   # Anna (AI voice receptionist) add-on
 ├── automation.html         # AI automation & audit
@@ -44,7 +44,7 @@ Visible placeholders on the page are in `[brackets]`.
 
 | # | What | Where |
 |---|------|-------|
-| 1 | **Pricing:** setup fee, monthly fee, tiers vs. custom quote, term, whether texting costs are included. Tier cards are built but hidden (`hidden` attribute on `#pricingTiers`). | `speed-to-lead.html` pricing section, FAQ "Can I cancel?" |
+| 1 | **Cancellation / term:** state month-to-month vs. minimum term, if you want it on the site (pricing itself stays off the site) | `speed-to-lead.html` FAQ "Can I cancel?" |
 | 2 | **Response-time test results:** `[N]`, `[X]`, `[Y]%`, `[industries]` (real, anonymized) | `index.html` proof block |
 | 3 | **Stats:** problem section uses soft wording on purpose. Source any hard numbers before adding them. | `index.html` problem section |
 | 4 | **Service area:** is Maryland included? OK to advertise remote setup across PA/DE/NJ? | `who-its-for.html`, footer, `index.html` strip, schema in `<head>` |
