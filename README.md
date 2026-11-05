@@ -44,7 +44,7 @@ Search the HTML for `TODO(Evan)` to find these.
 
 | # | What | Where |
 |---|------|-------|
-| 1 | **Form backend:** set up the Google Sheet + Apps Script (steps below) and paste the web app URL into `APPS_SCRIPT_URL`. Until then the form uses Formspree. | `js/main.js` |
+| 1 | **Form backend:** connected to the Google Sheet + Apps Script. After going live, send one real test from a phone and from a desktop browser. | `js/main.js` |
 | 2 | **Legal review:** privacy policy and SMS terms are plain-language drafts. Review before A2P 10DLC registration. | `privacy.html`, `terms.html` |
 | 3 | **Stats:** the problem section uses soft wording on purpose. Source any hard numbers before adding them. | `index.html` problem section |
 

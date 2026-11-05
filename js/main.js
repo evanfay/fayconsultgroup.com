@@ -227,7 +227,7 @@
      Paste the web app URL (ends in /exec) into APPS_SCRIPT_URL.
      While it's empty, the form falls back to Formspree so nothing breaks.
   ---------------------------------------- */
-  var APPS_SCRIPT_URL = ''; // TODO(Evan): paste your Apps Script web app URL here
+  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyga5f5kyX_FH5vaJBLAuSwYJHtFP8zGGjv80Bl_UDMQv66StPeS_M8hlFTBtRowgY/exec';
   var FORMSPREE_URL = 'https://formspree.io/f/mnjoeolv';
   var testForm = document.getElementById('testForm');
 
