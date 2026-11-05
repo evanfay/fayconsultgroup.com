@@ -181,8 +181,8 @@
           </div>
 
           <div class="contact-form-card fade-up delay-2">
-            <!-- Backend: Formspree (same endpoint as the old contact form), see FORM_ENDPOINT in js/main.js.
-                 TODO(Evan): confirm the form backend you want long term (Formspree, Make.com webhook, or Apps Script). -->
+            <!-- Backend: Google Apps Script (google-apps-script/form-handler.gs), set in js/main.js.
+                 The action below is only a no-JavaScript fallback. -->
             <form id="testForm" action="https://formspree.io/f/mnjoeolv" method="POST" novalidate>
               <h3>Request your free test</h3>
               <input type="hidden" name="_subject" value="New response-time test request" />

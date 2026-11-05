@@ -222,11 +222,28 @@
 
   /* ----------------------------------------
      9. Response-time test form
-     Backend: Formspree (same endpoint the old contact form used).
-     TODO(Evan): confirm form backend; swap FORM_ENDPOINT if it changes.
+     Backend: Google Apps Script web app (google-apps-script/form-handler.gs).
+     It logs each lead to a Google Sheet, emails Evan, and auto-replies to the lead.
+     Paste the web app URL (ends in /exec) into APPS_SCRIPT_URL.
+     While it's empty, the form falls back to Formspree so nothing breaks.
   ---------------------------------------- */
-  var FORM_ENDPOINT = 'https://formspree.io/f/mnjoeolv';
+  var APPS_SCRIPT_URL = ''; // TODO(Evan): paste your Apps Script web app URL here
+  var FORMSPREE_URL = 'https://formspree.io/f/mnjoeolv';
   var testForm = document.getElementById('testForm');
+
+  function sendForm(data) {
+    if (APPS_SCRIPT_URL) {
+      // Form-encoded "simple" request: no CORS preflight, which Apps Script can't answer
+      return fetch(APPS_SCRIPT_URL, { method: 'POST', body: new URLSearchParams(data) })
+        .then(function (res) { return res.json(); })
+        .then(function (out) { if (!out || !out.ok) throw new Error('Form rejected'); });
+    }
+    return fetch(FORMSPREE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (res) { if (!res.ok) throw new Error('Form error ' + res.status); });
+  }
   var testSuccess = document.getElementById('testSuccess');
 
   if (testForm) {
@@ -245,13 +262,8 @@
       });
       data.submitted_from = window.location.href;
 
-      fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
-      })
-        .then(function (res) {
-          if (!res.ok) throw new Error('Form error ' + res.status);
+      sendForm(data)
+        .then(function () {
           testForm.style.display = 'none';
           if (testSuccess) {
             testSuccess.classList.add('show');

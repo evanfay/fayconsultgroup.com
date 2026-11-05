@@ -26,6 +26,7 @@ assistants and AI automation as add-ons.
 ├── css/styles.css          # All shared styles (section 20 = speed-to-lead components)
 ├── js/main.js              # Nav, animations, ROI calculator, form submit, analytics events
 ├── js/industries.js        # Industry cards data: edit this to add/remove industries
+├── google-apps-script/     # form-handler.gs: Google Sheet + email backend for the contact form
 ├── images/                 # logo-sm.png (nav/favicon), og-logo.png (social), evan.jpg (About)
 └── CNAME
 ```
@@ -43,7 +44,7 @@ Search the HTML for `TODO(Evan)` to find these.
 
 | # | What | Where |
 |---|------|-------|
-| 1 | **Form backend:** currently Formspree `mnjoeolv` (free tier). Decide whether to switch (see notes below). | `contact.html` form `action` + `FORM_ENDPOINT` in `js/main.js` |
+| 1 | **Form backend:** set up the Google Sheet + Apps Script (steps below) and paste the web app URL into `APPS_SCRIPT_URL`. Until then the form uses Formspree. | `js/main.js` |
 | 2 | **Legal review:** privacy policy and SMS terms are plain-language drafts. Review before A2P 10DLC registration. | `privacy.html`, `terms.html` |
 | 3 | **Stats:** the problem section uses soft wording on purpose. Source any hard numbers before adding them. | `index.html` problem section |
 
@@ -52,6 +53,34 @@ Decided (Nov 2026): no pricing on the site; month-to-month, cancel anytime; serv
 integrations described as "the major tools"; free 15-minute mini audit plus a paid full audit;
 Anna demo line stays (set up as a plumbing company); anna.fayconsultgroup.com is retired in favor
 of `voice-assistants.html`.
+
+---
+
+## Form Backend: Google Sheet + Apps Script
+
+The free response-time test form sends to a Google Apps Script web app that:
+adds the lead to a Google Sheet, emails you an alert (hit Reply to answer the lead), and sends
+the lead an instant "got it" email from your account. Free, with no submission cap beyond
+Google's daily email limits.
+
+**One-time setup (about 5 minutes), signed in as evan@fayconsultgroup.com:**
+
+1. Create a new Google Sheet named **Website Leads**.
+2. In the sheet: **Extensions → Apps Script**. Delete the sample code, paste in all of
+   `google-apps-script/form-handler.gs`, and click **Save**.
+3. In the function dropdown at the top, pick **testSetup** and click **Run**. Approve the
+   permissions prompt (choose your account → Advanced → Go to project → Allow). You should get
+   two test emails, and a **Leads** tab appears with one test row. Delete that row.
+4. Click **Deploy → New deployment**. Click the gear icon → **Web app**. Set
+   **Execute as: Me** and **Who has access: Anyone**. Click **Deploy** and copy the
+   **Web app URL** (ends in `/exec`).
+5. Paste that URL into `APPS_SCRIPT_URL` near the top of section 9 in `js/main.js`, then
+   commit and push. (Or send it to Claude to do.)
+
+**Changing the script later:** edit it in Apps Script, then **Deploy → Manage deployments →
+pencil icon → Version: New version → Deploy**. The URL stays the same.
+
+To change the auto-reply wording or the alert address, edit the settings at the top of the script.
 
 ---
 
