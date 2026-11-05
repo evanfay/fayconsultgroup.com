@@ -39,26 +39,19 @@ event; a successful test-form submit sends `generate_lead`.
 
 ## Before Going Live — Open Items
 
-Every item is also marked in the HTML with a `TODO(Evan)` comment. Search for `TODO(Evan)`.
-Visible placeholders on the page are in `[brackets]`.
+Search the HTML for `TODO(Evan)` to find these.
 
 | # | What | Where |
 |---|------|-------|
-| 1 | **Cancellation / term:** state month-to-month vs. minimum term, if you want it on the site (pricing itself stays off the site) | `speed-to-lead.html` FAQ "Can I cancel?" |
-| 2 | **Response-time test results:** `[N]`, `[X]`, `[Y]%`, `[industries]` (real, anonymized) | `index.html` proof block |
-| 3 | **Stats:** problem section uses soft wording on purpose. Source any hard numbers before adding them. | `index.html` problem section |
-| 4 | **Service area:** is Maryland included? OK to advertise remote setup across PA/DE/NJ? | `who-its-for.html`, footer, `index.html` strip, schema in `<head>` |
-| 5 | **Integrations:** which are supported at launch (none are named on the site yet) | `speed-to-lead.html` "Do I need new software?" |
-| 6 | **AI audit:** free mini-audit or paid, and format | `automation.html` |
-| 7 | **Form backend:** currently Formspree `mnjoeolv` (the old contact form's endpoint). Confirm or swap. | `contact.html` form `action` + `FORM_ENDPOINT` in `js/main.js` |
-| 8 | **Booking:** Google Calendar link `calendar.app.google/FocAjrRYRFWKcmJGA` (from the old site). Confirm it still works; optional inline embed. | All "Book a call" buttons |
-| 9 | **Voice demo:** confirm demo line (610) 884-6159 is live; add `audio/anna-sample-call.mp3` and uncomment the `<audio>` block | `voice-assistants.html` |
-| 10 | **anna.fayconsultgroup.com:** link to it, fold it in, or leave separate | `voice-assistants.html` |
-| 11 | **Headshot:** using a compressed copy of the existing photo (`images/evan.jpg`) | `about.html` |
-| 12 | **Street address** (140 Church St): show publicly or not. Currently only "Phoenixville, PA". | Footer, schema |
-| 13 | **Business phone** for click-to-call (none on the site yet) | `contact.html`, sticky mobile bar |
-| 14 | **Legal review:** privacy policy and SMS terms are plain-language drafts. Review before A2P 10DLC registration. | `privacy.html`, `terms.html` |
-| 15 | **Employer names:** About page says "freight logistics" and "a manufacturer" without naming companies. Name them only if you want to. | `about.html` |
+| 1 | **Form backend:** currently Formspree `mnjoeolv` (free tier). Decide whether to switch (see notes below). | `contact.html` form `action` + `FORM_ENDPOINT` in `js/main.js` |
+| 2 | **Legal review:** privacy policy and SMS terms are plain-language drafts. Review before A2P 10DLC registration. | `privacy.html`, `terms.html` |
+| 3 | **Stats:** the problem section uses soft wording on purpose. Source any hard numbers before adding them. | `index.html` problem section |
+
+Decided (Nov 2026): no pricing on the site; month-to-month, cancel anytime; service area PA/DE/NJ
+(no MD), remote setup OK; street address public; no phone number on the site; no employer names;
+integrations described as "the major tools"; free 15-minute mini audit plus a paid full audit;
+Anna demo line stays (set up as a plumbing company); anna.fayconsultgroup.com is retired in favor
+of `voice-assistants.html`.
 
 ---
 

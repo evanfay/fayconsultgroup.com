@@ -2743,3 +2743,7 @@ legend {
   .fade-up { opacity: 1; transform: none; }
   .orb { display: none; }
 }
+
+/* Two-stat proof row */
+.proof__stats--2 { grid-template-columns: repeat(2, 1fr); max-width: 640px; margin-left: auto; margin-right: auto; }
+@media (max-width: 768px) { .proof__stats--2 { grid-template-columns: 1fr; } }
